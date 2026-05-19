@@ -70,7 +70,7 @@
 
 ### 📊 ERD диаграмма
 
-*[Место для скриншота ERD диаграммы]*
+<img width="893" height="869" alt="ERD" src="https://github.com/user-attachments/assets/5eb2e5d8-2945-4166-92c5-5a72cee6f00f" />
 
 ---
 
@@ -88,13 +88,4 @@
 | `LabController` | Лабораторные испытания |
 | `DeviationsController` | Отклонения |
 
-### Пример запроса
 
-```http
-POST /api/auth/login
-Content-Type: application/json
-
-{
-    "login": "tech.ivanov",
-    "password": "123"
-}
