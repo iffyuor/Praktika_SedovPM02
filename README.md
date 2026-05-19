@@ -29,3 +29,72 @@
 ---
 
 ## 🏗️ Архитектура системы
+
+### 🛠️ Технологический стек
+
+| Компонент | Технология |
+|:---|:---|
+| Desktop-приложение | WPF (.NET Framework 4.8) |
+| API | ASP.NET Web API 2 |
+| База данных | Microsoft SQL Server |
+| HTTP-клиент | HttpClient |
+| Сериализация | Newtonsoft.Json |
+| Графика (капча) | SkiaSharp |
+| Тестирование | MSTest, xUnit |
+
+---
+
+## 💾 База данных
+
+### Структура БД «AGRO»
+
+База данных содержит **19 таблиц**:
+
+| Таблица | Назначение |
+|:---|:---|
+| `Users` | Пользователи системы |
+| `Roles` | Роли пользователей |
+| `Products` | Продукция |
+| `Recipes` | Рецептуры |
+| `RecipeComposition` | Состав рецептур |
+| `ProcessCards` | Технологические карты |
+| `ProductionOrders` | Производственные заказы |
+| `Batches` | Производственные партии |
+| `ProductionSteps` | Шаги производства |
+| `Deviations` | Отклонения |
+| `LaboratoryTests` | Лабораторные испытания |
+| `TestResults` | Результаты испытаний |
+| `QualityControl` | Контроль качества |
+| `RawMaterialBatches` | Партии сырья |
+| `EventLog` | Журнал событий |
+
+### 📊 ERD диаграмма
+
+*[Место для скриншота ERD диаграммы]*
+
+---
+
+## 🔌 API (APIAGRO)
+
+### Основные контроллеры
+
+| Контроллер | Назначение |
+|:---|:---|
+| `AuthController` | Авторизация и регистрация |
+| `ReferenceController` | Справочная информация |
+| `RecipesController` | Рецептуры |
+| `ProcessCardsController` | Технологические карты |
+| `ProductionController` | Заказы и партии |
+| `LabController` | Лабораторные испытания |
+| `DeviationsController` | Отклонения |
+
+### Пример запроса
+
+```http
+POST /api/auth/login
+Content-Type: application/json
+
+{
+    "login": "tech.ivanov",
+    "password": "123"
+}
